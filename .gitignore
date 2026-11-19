@@ -14,3 +14,5 @@ build/
 .venv/
 venv/
 ipynb/main.ipynb
+reports/assets/
+reports/**/__pycache__/
