@@ -1,4 +1,3 @@
-#!/home/opn/.local/share/mamba/envs/pyww3/bin/python
 """
 Inpaint NaN values using iterative diffusion.
 
@@ -35,34 +34,94 @@ def inpaint_nans_2d(data: np.ndarray, max_iter: int = 500, tol: float = 1e-5) ->
     result = data.astype(np.float64).copy()
     mask = np.isnan(data)
 
-    # No NaN to fill
     if not mask.any():
         return result.astype(np.float32)
 
-    # All NaN - can't fill
     if mask.all():
         return result.astype(np.float32)
 
-    # Initial fill with global mean of valid values
     valid_mean = np.nanmean(data)
     result[mask] = valid_mean
 
-    # Iterative diffusion
-    for i in range(max_iter):
+    for _ in range(max_iter):
         old = result.copy()
-
-        # Apply mean filter (3x3 neighborhood)
         smoothed = uniform_filter(result, size=3, mode="nearest")
-
-        # Only update NaN positions
         result[mask] = smoothed[mask]
-
-        # Check convergence
         max_change = np.max(np.abs(result[mask] - old[mask]))
         if max_change < tol:
             break
 
     return result.astype(np.float32)
+
+
+def inpaint_nans_nd(
+    data: np.ndarray,
+    max_iter: int = 500,
+    tol: float = 1e-5,
+    parallel: bool = True,
+    max_workers: Optional[int] = None,
+    verbose: bool = False,
+) -> np.ndarray:
+    """
+    Inpaint NaNs on the last two axes (spatial); leading dims sliced independently.
+
+    Args:
+        data: N-D array with shape (..., y, x)
+        max_iter: Maximum iterations per slice
+        tol: Convergence tolerance
+        parallel: Use thread pool when there are multiple slices
+        max_workers: Thread pool size (default: CPU count)
+        verbose: Print progress
+
+    Returns:
+        Array with NaN values filled (float32)
+    """
+    import time as time_module
+
+    if data.ndim < 2:
+        raise ValueError(f"Expected at least 2D array, got {data.ndim}D")
+
+    if data.ndim == 2:
+        return inpaint_nans_2d(data, max_iter=max_iter, tol=tol)
+
+    leading = data.shape[:-2]
+    n_slices = int(np.prod(leading)) if leading else 1
+    flat = data.reshape((n_slices, data.shape[-2], data.shape[-1]))
+
+    nan_count = int(np.isnan(flat).sum())
+    if nan_count == 0:
+        if verbose:
+            print("    No NaN values, skipping inpaint")
+        return data.astype(np.float32)
+
+    if verbose:
+        print(
+            f"    Inpainting {n_slices} slices ({nan_count:,} NaN values)...",
+            end="",
+            flush=True,
+        )
+
+    start_time = time_module.perf_counter()
+    result = np.empty_like(flat, dtype=np.float32)
+
+    def process_slice(i: int) -> np.ndarray:
+        return inpaint_nans_2d(flat[i], max_iter=max_iter, tol=tol)
+
+    if parallel and n_slices > 1:
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            slices = list(executor.map(process_slice, range(n_slices)))
+        for i, s in enumerate(slices):
+            result[i] = s
+    else:
+        for i in range(n_slices):
+            result[i] = process_slice(i)
+            if verbose and n_slices > 10 and (i + 1) % 20 == 0:
+                print(f" {i + 1}/{n_slices}", end="", flush=True)
+
+    if verbose:
+        print(f" done ({time_module.perf_counter() - start_time:.1f}s)")
+
+    return result.reshape(data.shape)
 
 
 def inpaint_nans_3d(
@@ -74,73 +133,31 @@ def inpaint_nans_3d(
     verbose: bool = True,
 ) -> np.ndarray:
     """
-    Inpaint NaN values in a 3D array (lon, lat, time).
+    Inpaint NaN values in a 3D array (..., y, x) — typically (lon, lat, time)
+    after transpose, or any 3D with spatial axes last.
 
-    Applies 2D inpainting to each time slice independently.
-
-    Args:
-        data: 3D array with shape (lon, lat, time)
-        max_iter: Maximum iterations per slice
-        tol: Convergence tolerance
-        parallel: Use parallel processing (default True)
-        max_workers: Number of workers for parallel (default: CPU count)
-        verbose: Print progress (default True)
-
-    Returns:
-        Array with NaN values filled
+    Prefer :func:`inpaint_nans_nd` for arbitrary leading dimensions.
     """
-    import sys
-    import time as time_module
-
     if data.ndim != 3:
         raise ValueError(f"Expected 3D array, got {data.ndim}D")
-
-    nt = data.shape[2]
-    nan_count = np.sum(np.isnan(data))
-
-    # Skip if no NaN
-    if nan_count == 0:
-        if verbose:
-            print("    No NaN values, skipping inpaint")
-        return data.astype(np.float32)
-
-    if verbose:
-        print(f"    Inpainting {nt} timesteps ({nan_count:,} NaN values)...", end="", flush=True)
-
-    start_time = time_module.perf_counter()
-    result = np.zeros_like(data, dtype=np.float32)
-
-    def process_slice(t: int) -> np.ndarray:
-        return inpaint_nans_2d(data[:, :, t], max_iter=max_iter, tol=tol)
-
-    if parallel and nt > 1:
-        with ThreadPoolExecutor(max_workers=max_workers) as executor:
-            slices = list(executor.map(process_slice, range(nt)))
-        for t, s in enumerate(slices):
-            result[:, :, t] = s
-    else:
-        for t in range(nt):
-            result[:, :, t] = process_slice(t)
-            if verbose and nt > 10 and (t + 1) % 20 == 0:
-                print(f" {t+1}/{nt}", end="", flush=True)
-
-    elapsed = time_module.perf_counter() - start_time
-    if verbose:
-        print(f" done ({elapsed:.1f}s)")
-
-    return result
+    return inpaint_nans_nd(
+        data,
+        max_iter=max_iter,
+        tol=tol,
+        parallel=parallel,
+        max_workers=max_workers,
+        verbose=verbose,
+    )
 
 
 def test_inpaint():
     """Test inpainting with synthetic data."""
     print("Testing inpaint_nans_2d...")
 
-    # Create test data with NaN hole
     ny, nx = 100, 150
     y, x = np.mgrid[0:ny, 0:nx]
     data = np.sin(x / 10) * np.cos(y / 10) + x / 50
 
-    # Add NaN hole in center
     mask = ((x - nx // 2) ** 2 + (y - ny // 2) ** 2) < 400
     data_with_nan = data.copy()
     data_with_nan[mask] = np.nan
@@ -148,21 +165,18 @@ def test_inpaint():
     print(f"  Input shape: {data_with_nan.shape}")
     print(f"  NaN count: {np.sum(np.isnan(data_with_nan))}")
 
-    # Inpaint
     filled = inpaint_nans_2d(data_with_nan)
 
     print(f"  Output NaN count: {np.sum(np.isnan(filled))}")
 
-    # Compare with original (should be close in filled region)
     rmse = np.sqrt(np.mean((filled[mask] - data[mask]) ** 2))
     print(f"  RMSE in filled region: {rmse:.6f}")
 
-    # Test 3D
     print("\nTesting inpaint_nans_3d...")
-    data_3d = np.stack([data_with_nan] * 10, axis=2)
+    data_3d = np.stack([data_with_nan] * 10, axis=0)
     print(f"  Input shape: {data_3d.shape}")
 
-    filled_3d = inpaint_nans_3d(data_3d)
+    filled_3d = inpaint_nans_3d(data_3d, verbose=False)
     print(f"  Output NaN count: {np.sum(np.isnan(filled_3d))}")
     print("  OK!")
 

@@ -1,0 +1,44 @@
+# inpaint
+
+Coastal NaN fill / extrapolation for **xarray** (`DataArray` / `Dataset`).
+
+Algorithms only — no NetCDF I/O. Open and save files yourself with xarray.
+
+## Install
+
+```bash
+pip install -e /path/to/pkgs/inpaint
+```
+
+## Usage
+
+```python
+import xarray as xr
+from inpaint import fill_nans, iterative_diffusion, gaussian_blur
+
+ds = xr.open_dataset("wave.nc")
+
+# DataArray
+da = fill_nans(ds["hs"], method="gaussian", stddev=1.0)
+da = fill_nans(ds["hs"], method="iterative", max_iter=500, tol=1e-5)
+
+# Dataset (vars=None → all numeric data_vars)
+ds_out = fill_nans(ds, method="gaussian", vars=["hs", "t01"])
+
+# Shortcuts
+da2 = iterative_diffusion(ds["hs"])
+ds2 = gaussian_blur(ds, vars=["hs"], stddev=1.0)
+
+# xarray accessor
+da3 = ds["hs"].inpaint.fill(method="gaussian", stddev=1.0)
+ds3 = ds.inpaint.fill(method="iterative", vars=["hs"])
+```
+
+## Methods
+
+| Method | Key params | Backend |
+|--------|------------|---------|
+| `gaussian` | `stddev`, `max_passes` | Astropy `interpolate_replace_nans` (multi-pass) |
+| `iterative` | `max_iter`, `tol`, `parallel` | SciPy mean diffusion |
+
+Spatial dims are detected as `lat`/`lon` or `y`/`x`. Other dims (`time`, `depth`, …) are processed slice-by-slice.
