@@ -1,0 +1,51 @@
+# Bounding boxes for coastal-fill report (lon_min, lon_max, lat_min, lat_max)
+# National view is downsampled for Leaflet weight; local regions keep full grid.
+
+regions:
+  - id: indonesia
+    name: National (Indonesia)
+    lon_min: 94.0
+    lon_max: 141.0
+    lat_min: -11.0
+    lat_max: 6.0
+    stride: 3
+
+  - id: selat_sunda
+    name: Sunda Strait
+    lon_min: 104.5
+    lon_max: 107.0
+    lat_min: -7.0
+    lat_max: -5.5
+    stride: 1
+
+  - id: nusa_tenggara
+    name: Nusa Tenggara
+    lon_min: 116.0
+    lon_max: 126.0
+    lat_min: -12.0
+    lat_max: -6.0
+    stride: 1
+
+  - id: bali
+    name: Bali
+    lon_min: 114.4
+    lon_max: 115.8
+    lat_min: -9.0
+    lat_max: -7.8
+    stride: 1
+
+  - id: selat_malaka
+    name: Malacca Strait
+    lon_min: 98.0
+    lon_max: 104.0
+    lat_min: -1.0
+    lat_max: 6.0
+    stride: 1
+
+  - id: maluku
+    name: Maluku
+    lon_min: 124.0
+    lon_max: 135.0
+    lat_min: -9.0
+    lat_max: 3.0
+    stride: 1
