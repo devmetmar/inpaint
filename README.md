@@ -41,4 +41,25 @@ ds3 = ds.inpaint.fill(method="iterative", vars=["hs"])
 | `gaussian` | `stddev`, `max_passes` | Astropy `interpolate_replace_nans` (multi-pass) |
 | `iterative` | `max_iter`, `tol`, `parallel` | SciPy mean diffusion |
 
-Spatial dims are detected as `lat`/`lon` or `y`/`x`. Other dims (`time`, `depth`, …) are processed slice-by-slice.
+Spatial (Y/X) and time (T) dims are detected from **CF/NetCDF Conventions** on coordinates — `standard_name`, `axis`, then `units` — so labels like `ROW`/`COL`/`TSTEP` work if metadata is present. Common names (`lat`/`lon`/`time`) are a fallback. Other dims are processed slice-by-slice.
+
+```python
+from inpaint import describe_axes
+describe_axes(ds["hs"])  # {'dims': {...}, 'y': ..., 'x': ..., 'time': ...}
+```
+
+## Tests
+
+```bash
+pip install -e ".[test]"
+pytest
+```
+
+Self-checks (no pytest required):
+
+```python
+from inpaint import test_iterative_diffusion, test_gaussian_blur
+
+test_iterative_diffusion()
+test_gaussian_blur()
+```
