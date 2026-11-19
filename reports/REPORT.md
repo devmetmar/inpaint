@@ -1,6 +1,6 @@
 # InaCAWO Coastal Fill Report
 
-_Generated 2026-11-19 09:33 UTC_
+_Generated 2026-11-19 10:52 UTC_
 
 ## Purpose
 
@@ -26,11 +26,11 @@ Compare coastal NaN extrapolation for InaCAWO Wave and Flows near coastlines: **
 
 | ID | Name | Lon | Lat | Stride |
 |----|------|-----|-----|--------|
-| `indonesia` | Nasional (Indonesia) | 94.0–141.0 | -11.0–6.0 | 3 |
-| `selat_sunda` | Selat Sunda | 104.5–107.0 | -7.0–-5.5 | 1 |
+| `indonesia` | National (Indonesia) | 94.0–141.0 | -11.0–6.0 | 1 |
+| `selat_sunda` | Sunda Strait | 104.5–107.0 | -7.0–-5.5 | 1 |
 | `nusa_tenggara` | Nusa Tenggara | 116.0–126.0 | -12.0–-6.0 | 1 |
 | `bali` | Bali | 114.4–115.8 | -9.0–-7.8 | 1 |
-| `selat_malaka` | Selat Malaka | 98.0–104.0 | -1.0–6.0 | 1 |
+| `selat_malaka` | Malacca Strait | 98.0–104.0 | -1.0–6.0 | 1 |
 | `maluku` | Maluku | 124.0–135.0 | -9.0–3.0 | 1 |
 
 ## Interactive map
@@ -39,17 +39,17 @@ Open [`index.html`](index.html) (requires network for OSM + Leaflet CDN). Use re
 
 ## Metrics
 
-### Nasional (Indonesia) (`indonesia`)
+### National (Indonesia) (`indonesia`)
 
 | Var | NaN raw | NaN G+NE | NaN I+NE | Gain G | Gain I | |Δ| hole | |Δ| NE | t_g | t_i |
 |-----|---------|----------|----------|--------|--------|---------|-------|-----|-----|
-| `hs` | 31,131 | 27,424 | 27,424 | 3,738 | 3,738 | 0.2926 | 0.0024 | 0.11 | 0.24 |
-| `u` | 31,570 | 27,424 | 27,424 | 4,160 | 4,160 | 4.9401 | 0.1404 | 0.11 | 0.23 |
-| `v` | 31,570 | 27,424 | 27,424 | 4,160 | 4,160 | 5.0264 | 0.1159 | 0.11 | 0.23 |
+| `hs` | 280,529 | 271,711 | 271,711 | 10,264 | 10,264 | 0.4374 | 0.0011 | 2.52 | 2.53 |
+| `u` | 284,505 | 271,711 | 271,711 | 13,999 | 13,999 | 4.9792 | 0.0652 | 2.60 | 2.53 |
+| `v` | 284,505 | 271,711 | 271,711 | 13,999 | 13,999 | 5.6849 | 0.0558 | 2.61 | 2.53 |
 
 ![preview indonesia](assets/indonesia/hs/gaussian_ne.png)
 
-### Selat Sunda (`selat_sunda`)
+### Sunda Strait (`selat_sunda`)
 
 | Var | NaN raw | NaN G+NE | NaN I+NE | Gain G | Gain I | |Δ| hole | |Δ| NE | t_g | t_i |
 |-----|---------|----------|----------|--------|--------|---------|-------|-----|-----|
@@ -63,7 +63,7 @@ Open [`index.html`](index.html) (requires network for OSM + Leaflet CDN). Use re
 
 | Var | NaN raw | NaN G+NE | NaN I+NE | Gain G | Gain I | |Δ| hole | |Δ| NE | t_g | t_i |
 |-----|---------|----------|----------|--------|--------|---------|-------|-----|-----|
-| `hs` | 8,962 | 8,259 | 8,259 | 858 | 858 | 0.1468 | 0.0005 | 0.04 | 0.13 |
+| `hs` | 8,962 | 8,259 | 8,259 | 858 | 858 | 0.1468 | 0.0005 | 0.03 | 0.13 |
 | `u` | 8,962 | 8,259 | 8,259 | 858 | 858 | 2.3893 | 0.0140 | 0.03 | 0.13 |
 | `v` | 8,962 | 8,259 | 8,259 | 858 | 858 | 1.7918 | 0.0113 | 0.03 | 0.13 |
 
@@ -79,7 +79,7 @@ Open [`index.html`](index.html) (requires network for OSM + Leaflet CDN). Use re
 
 ![preview bali](assets/bali/hs/gaussian_ne.png)
 
-### Selat Malaka (`selat_malaka`)
+### Malacca Strait (`selat_malaka`)
 
 | Var | NaN raw | NaN G+NE | NaN I+NE | Gain G | Gain I | |Δ| hole | |Δ| NE | t_g | t_i |
 |-----|---------|----------|----------|--------|--------|---------|-------|-----|-----|
@@ -93,9 +93,9 @@ Open [`index.html`](index.html) (requires network for OSM + Leaflet CDN). Use re
 
 | Var | NaN raw | NaN G+NE | NaN I+NE | Gain G | Gain I | |Δ| hole | |Δ| NE | t_g | t_i |
 |-----|---------|----------|----------|--------|--------|---------|-------|-----|-----|
-| `hs` | 24,098 | 21,590 | 21,590 | 2,803 | 2,803 | 0.1478 | 0.0010 | 0.13 | 0.31 |
+| `hs` | 24,098 | 21,590 | 21,590 | 2,803 | 2,803 | 0.1478 | 0.0010 | 0.14 | 0.31 |
 | `u` | 24,416 | 21,590 | 21,590 | 3,109 | 3,109 | 3.7976 | 0.0846 | 0.14 | 0.31 |
-| `v` | 24,416 | 21,590 | 21,590 | 3,109 | 3,109 | 2.3938 | 0.0326 | 0.14 | 0.30 |
+| `v` | 24,416 | 21,590 | 21,590 | 3,109 | 3,109 | 2.3938 | 0.0326 | 0.14 | 0.31 |
 
 ![preview maluku](assets/maluku/hs/gaussian_ne.png)
 

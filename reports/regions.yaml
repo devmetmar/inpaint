@@ -1,5 +1,5 @@
 # Bounding boxes for coastal-fill report (lon_min, lon_max, lat_min, lat_max)
-# National view is downsampled for Leaflet weight; local regions keep full grid.
+# All regions use full InaCAWO grid (stride: 1 ≈ 3 km).
 
 regions:
   - id: indonesia
@@ -8,7 +8,7 @@ regions:
     lon_max: 141.0
     lat_min: -11.0
     lat_max: 6.0
-    stride: 3
+    stride: 1
 
   - id: selat_sunda
     name: Sunda Strait

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-19 09:33 UTC",
+    "generated_at": "2026-11-19 10:52 UTC",
     "wave_path": "/scratch/bmkg_opn/Production_Unit/CAWO_OUTPUTS/Combined/2026/11/InaCAWOWave_20261118_1200.nc",
     "flow_path": "/scratch/bmkg_opn/Production_Unit/CAWO_OUTPUTS/Combined/2026/11/InaCAWOFlows_20261118_1200.nc",
     "time_index": 0,
@@ -16,7 +16,7 @@
         "lat_min": -11.0,
         "lat_max": 6.0
       },
-      "stride": 3,
+      "stride": 1,
       "layers": {
         "hs": {
           "bounds": [
@@ -25,8 +25,8 @@
               94.0
             ],
             [
-              5.950000000000002,
-              140.95
+              5.975000000000002,
+              141.0
             ]
           ],
           "overlays": {
@@ -40,7 +40,7 @@
             "diff_gauss_iter_ne": "assets/indonesia/hs/diff_gauss_iter_ne.png"
           },
           "vmin": 0.0,
-          "vmax": 1.847293734550476
+          "vmax": 1.8466796875
         },
         "u": {
           "bounds": [
@@ -49,8 +49,8 @@
               94.0
             ],
             [
-              5.950000000000002,
-              140.95
+              5.975000000000002,
+              141.0
             ]
           ],
           "overlays": {
@@ -63,8 +63,8 @@
             "diff_gauss_iter": "assets/indonesia/u/diff_gauss_iter.png",
             "diff_gauss_iter_ne": "assets/indonesia/u/diff_gauss_iter_ne.png"
           },
-          "vmin": -96.26560791015625,
-          "vmax": 96.26560791015625
+          "vmin": -96.36538818359375,
+          "vmax": 96.36538818359375
         },
         "v": {
           "bounds": [
@@ -73,8 +73,8 @@
               94.0
             ],
             [
-              5.950000000000002,
-              140.95
+              5.975000000000002,
+              141.0
             ]
           ],
           "overlays": {
@@ -87,49 +87,49 @@
             "diff_gauss_iter": "assets/indonesia/v/diff_gauss_iter.png",
             "diff_gauss_iter_ne": "assets/indonesia/v/diff_gauss_iter_ne.png"
           },
-          "vmin": -83.9023095703125,
-          "vmax": 83.9023095703125
+          "vmin": -83.95349609375003,
+          "vmax": 83.95349609375003
         }
       },
       "metrics": {
         "hs": {
-          "nan_raw": 31131,
-          "nan_gaussian_ne": 27424,
-          "nan_iterative_ne": 27424,
-          "coastal_gain": 3738,
-          "coastal_gain_iterative": 3738,
-          "diff_mean": 0.2926173508167267,
-          "diff_max": 0.9721660614013672,
-          "diff_ne_mean": 0.0023688313085585833,
-          "diff_ne_max": 0.9721660614013672,
-          "t_gaussian": 0.10846170037984848,
-          "t_iterative": 0.23739830777049065
+          "nan_raw": 280529,
+          "nan_gaussian_ne": 271711,
+          "nan_iterative_ne": 271711,
+          "coastal_gain": 10264,
+          "coastal_gain_iterative": 10264,
+          "diff_mean": 0.43739455938339233,
+          "diff_max": 0.946412980556488,
+          "diff_ne_mean": 0.0010511183645576239,
+          "diff_ne_max": 0.8293569087982178,
+          "t_gaussian": 2.51900302991271,
+          "t_iterative": 2.534017115831375
         },
         "u": {
-          "nan_raw": 31570,
-          "nan_gaussian_ne": 27424,
-          "nan_iterative_ne": 27424,
-          "coastal_gain": 4160,
-          "coastal_gain_iterative": 4160,
-          "diff_mean": 4.940080165863037,
-          "diff_max": 102.37265014648438,
-          "diff_ne_mean": 0.14036040008068085,
-          "diff_ne_max": 91.07957458496094,
-          "t_gaussian": 0.10655389726161957,
-          "t_iterative": 0.2311042696237564
+          "nan_raw": 284505,
+          "nan_gaussian_ne": 271711,
+          "nan_iterative_ne": 271711,
+          "coastal_gain": 13999,
+          "coastal_gain_iterative": 13999,
+          "diff_mean": 4.979168891906738,
+          "diff_max": 109.45331573486328,
+          "diff_ne_mean": 0.06516551226377487,
+          "diff_ne_max": 100.00334930419922,
+          "t_gaussian": 2.601290997117758,
+          "t_iterative": 2.5307364128530025
         },
         "v": {
-          "nan_raw": 31570,
-          "nan_gaussian_ne": 27424,
-          "nan_iterative_ne": 27424,
-          "coastal_gain": 4160,
-          "coastal_gain_iterative": 4160,
-          "diff_mean": 5.026406288146973,
-          "diff_max": 86.05844116210938,
-          "diff_ne_mean": 0.11592007428407669,
-          "diff_ne_max": 65.204833984375,
-          "t_gaussian": 0.10812223330140114,
-          "t_iterative": 0.22708259895443916
+          "nan_raw": 284505,
+          "nan_gaussian_ne": 271711,
+          "nan_iterative_ne": 271711,
+          "coastal_gain": 13999,
+          "coastal_gain_iterative": 13999,
+          "diff_mean": 5.68492317199707,
+          "diff_max": 85.15095520019531,
+          "diff_ne_mean": 0.05581439658999443,
+          "diff_ne_max": 83.12612915039062,
+          "t_gaussian": 2.605745390057564,
+          "t_iterative": 2.5314648374915123
         }
       },
       "ne_coast_url": "assets/indonesia/ne_coast.geojson",
@@ -230,8 +230,8 @@
           "diff_max": 0.821342408657074,
           "diff_ne_mean": 0.015281864441931248,
           "diff_ne_max": 0.821342408657074,
-          "t_gaussian": 0.006256464868783951,
-          "t_iterative": 0.016269687563180923
+          "t_gaussian": 0.006230048835277557,
+          "t_iterative": 0.015815123915672302
         },
         "u": {
           "nan_raw": 2176,
@@ -243,8 +243,8 @@
           "diff_max": 8.170522689819336,
           "diff_ne_mean": 0.09586556255817413,
           "diff_ne_max": 8.170522689819336,
-          "t_gaussian": 0.00595465674996376,
-          "t_iterative": 0.017220616340637207
+          "t_gaussian": 0.005708571523427963,
+          "t_iterative": 0.015646662563085556
         },
         "v": {
           "nan_raw": 2176,
@@ -256,8 +256,8 @@
           "diff_max": 8.840826988220215,
           "diff_ne_mean": 0.09893026947975159,
           "diff_ne_max": 8.533772468566895,
-          "t_gaussian": 0.005849089473485947,
-          "t_iterative": 0.016616985201835632
+          "t_gaussian": 0.00615479052066803,
+          "t_iterative": 0.015616390854120255
         }
       },
       "ne_coast_url": "assets/selat_sunda/ne_coast.geojson",
@@ -358,8 +358,8 @@
           "diff_max": 0.7098385691642761,
           "diff_ne_mean": 0.00048498468822799623,
           "diff_ne_max": 0.6480854749679565,
-          "t_gaussian": 0.03502623736858368,
-          "t_iterative": 0.1341848149895668
+          "t_gaussian": 0.034369274973869324,
+          "t_iterative": 0.13398634642362595
         },
         "u": {
           "nan_raw": 8962,
@@ -371,8 +371,8 @@
           "diff_max": 16.263063430786133,
           "diff_ne_mean": 0.013992233201861382,
           "diff_ne_max": 8.769901275634766,
-          "t_gaussian": 0.03388746827840805,
-          "t_iterative": 0.13336749002337456
+          "t_gaussian": 0.03401083126664162,
+          "t_iterative": 0.13291632011532784
         },
         "v": {
           "nan_raw": 8962,
@@ -384,8 +384,8 @@
           "diff_max": 17.054536819458008,
           "diff_ne_mean": 0.011322067119181156,
           "diff_ne_max": 9.941993713378906,
-          "t_gaussian": 0.03394486755132675,
-          "t_iterative": 0.13354476168751717
+          "t_gaussian": 0.03377096727490425,
+          "t_iterative": 0.1317402794957161
         }
       },
       "ne_coast_url": "assets/nusa_tenggara/ne_coast.geojson",
@@ -486,8 +486,8 @@
           "diff_max": 0.5864216089248657,
           "diff_ne_mean": 0.0036297047045081854,
           "diff_ne_max": 0.5864216089248657,
-          "t_gaussian": 0.0032171830534934998,
-          "t_iterative": 0.009945832192897797
+          "t_gaussian": 0.003328923135995865,
+          "t_iterative": 0.010145951062440872
         },
         "u": {
           "nan_raw": 684,
@@ -499,8 +499,8 @@
           "diff_max": 25.51667022705078,
           "diff_ne_mean": 0.10208376497030258,
           "diff_ne_max": 18.186885833740234,
-          "t_gaussian": 0.003180127590894699,
-          "t_iterative": 0.010222837328910828
+          "t_gaussian": 0.003260962665081024,
+          "t_iterative": 0.010353662073612213
         },
         "v": {
           "nan_raw": 684,
@@ -512,8 +512,8 @@
           "diff_max": 17.384929656982422,
           "diff_ne_mean": 0.08329456299543381,
           "diff_ne_max": 17.384929656982422,
-          "t_gaussian": 0.003146253526210785,
-          "t_iterative": 0.010324418544769287
+          "t_gaussian": 0.0032268650829792023,
+          "t_iterative": 0.010226357728242874
         }
       },
       "ne_coast_url": "assets/bali/ne_coast.geojson",
@@ -614,8 +614,8 @@
           "diff_max": 1.1343358755111694,
           "diff_ne_mean": 0.007652700413018465,
           "diff_ne_max": 1.1343358755111694,
-          "t_gaussian": 0.06258881464600563,
-          "t_iterative": 0.12180845439434052
+          "t_gaussian": 0.06215537339448929,
+          "t_iterative": 0.1222919151186943
         },
         "u": {
           "nan_raw": 40055,
@@ -627,8 +627,8 @@
           "diff_max": 39.3449592590332,
           "diff_ne_mean": 0.22368735074996948,
           "diff_ne_max": 29.938316345214844,
-          "t_gaussian": 0.06746432557702065,
-          "t_iterative": 0.12227191776037216
+          "t_gaussian": 0.06868143007159233,
+          "t_iterative": 0.12154889479279518
         },
         "v": {
           "nan_raw": 40055,
@@ -640,8 +640,8 @@
           "diff_max": 39.522457122802734,
           "diff_ne_mean": 0.24563546478748322,
           "diff_ne_max": 28.207252502441406,
-          "t_gaussian": 0.06702455505728722,
-          "t_iterative": 0.12354140728712082
+          "t_gaussian": 0.06747541204094887,
+          "t_iterative": 0.12230666354298592
         }
       },
       "ne_coast_url": "assets/selat_malaka/ne_coast.geojson",
@@ -742,8 +742,8 @@
           "diff_max": 0.574042022228241,
           "diff_ne_mean": 0.0009827201720327139,
           "diff_ne_max": 0.4184713065624237,
-          "t_gaussian": 0.13460414111614227,
-          "t_iterative": 0.31414247304201126
+          "t_gaussian": 0.1423870138823986,
+          "t_iterative": 0.30981407314538956
         },
         "u": {
           "nan_raw": 24416,
@@ -755,8 +755,8 @@
           "diff_max": 113.85108947753906,
           "diff_ne_mean": 0.08464924991130829,
           "diff_ne_max": 103.2671127319336,
-          "t_gaussian": 0.13517149537801743,
-          "t_iterative": 0.312180008739233
+          "t_gaussian": 0.14200091361999512,
+          "t_iterative": 0.30926118791103363
         },
         "v": {
           "nan_raw": 24416,
@@ -768,8 +768,8 @@
           "diff_max": 45.551307678222656,
           "diff_ne_mean": 0.03261887654662132,
           "diff_ne_max": 42.366886138916016,
-          "t_gaussian": 0.1379706710577011,
-          "t_iterative": 0.30342796072363853
+          "t_gaussian": 0.13815955445170403,
+          "t_iterative": 0.3106358237564564
         }
       },
       "ne_coast_url": "assets/maluku/ne_coast.geojson",
