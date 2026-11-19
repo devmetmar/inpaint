@@ -10,9 +10,9 @@ build/
 .ruff_cache/
 .ipynb_checkpoints/
 *.png
+!reports/assets/**/*.png
 .env
 .venv/
 venv/
 ipynb/main.ipynb
 reports/**/__pycache__/
-# Keep reports/assets tracked so GitHub Pages can serve Leaflet overlays.
