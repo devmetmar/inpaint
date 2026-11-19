@@ -194,7 +194,7 @@ def run(
     wave_path: Path,
     flow_path: Path,
     time_index: int = 0,
-    land_erode_pixels: int = 1,
+    land_erode_pixels: int = 2,
     regions_file: Optional[Path] = None,
 ) -> Dict[str, Any]:
     regions_file = regions_file or (REPORTS_DIR / "regions.yaml")
@@ -317,7 +317,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     p.add_argument("--wave", type=Path, default=Path(DEFAULT_WAVE))
     p.add_argument("--flow", type=Path, default=Path(DEFAULT_FLOW))
     p.add_argument("--time-index", type=int, default=0)
-    p.add_argument("--land-erode-pixels", type=int, default=1)
+    p.add_argument("--land-erode-pixels", type=int, default=2)
     p.add_argument("--regions", type=Path, default=REPORTS_DIR / "regions.yaml")
     args = p.parse_args(argv)
 

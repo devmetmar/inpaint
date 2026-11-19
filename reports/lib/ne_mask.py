@@ -34,7 +34,7 @@ def _ne_land_clipped(lon: np.ndarray, lat: np.ndarray) -> "gpd.GeoDataFrame":
 def land_mask_ne10m(
     lon: np.ndarray,
     lat: np.ndarray,
-    land_erode_pixels: int = 1,
+    land_erode_pixels: int = 2,
 ) -> np.ndarray:
     """Return boolean land mask on (lat, lon) grid (True = land after optional erode).
 
