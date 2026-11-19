@@ -1,0 +1,779 @@
+{
+  "meta": {
+    "generated_at": "2026-11-19 09:33 UTC",
+    "wave_path": "/scratch/bmkg_opn/Production_Unit/CAWO_OUTPUTS/Combined/2026/11/InaCAWOWave_20261118_1200.nc",
+    "flow_path": "/scratch/bmkg_opn/Production_Unit/CAWO_OUTPUTS/Combined/2026/11/InaCAWOFlows_20261118_1200.nc",
+    "time_index": 0,
+    "land_erode_pixels": 1
+  },
+  "regions": [
+    {
+      "id": "indonesia",
+      "name": "National (Indonesia)",
+      "bbox": {
+        "lon_min": 94.0,
+        "lon_max": 141.0,
+        "lat_min": -11.0,
+        "lat_max": 6.0
+      },
+      "stride": 3,
+      "layers": {
+        "hs": {
+          "bounds": [
+            [
+              -10.999999999999998,
+              94.0
+            ],
+            [
+              5.950000000000002,
+              140.95
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/indonesia/hs/raw.png",
+            "gaussian": "assets/indonesia/hs/gaussian.png",
+            "iterative": "assets/indonesia/hs/iterative.png",
+            "gaussian_ne": "assets/indonesia/hs/gaussian_ne.png",
+            "iterative_ne": "assets/indonesia/hs/iterative_ne.png",
+            "nan_mask": "assets/indonesia/hs/nan_mask.png",
+            "diff_gauss_iter": "assets/indonesia/hs/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/indonesia/hs/diff_gauss_iter_ne.png"
+          },
+          "vmin": 0.0,
+          "vmax": 1.847293734550476
+        },
+        "u": {
+          "bounds": [
+            [
+              -10.999999999999998,
+              94.0
+            ],
+            [
+              5.950000000000002,
+              140.95
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/indonesia/u/raw.png",
+            "gaussian": "assets/indonesia/u/gaussian.png",
+            "iterative": "assets/indonesia/u/iterative.png",
+            "gaussian_ne": "assets/indonesia/u/gaussian_ne.png",
+            "iterative_ne": "assets/indonesia/u/iterative_ne.png",
+            "nan_mask": "assets/indonesia/u/nan_mask.png",
+            "diff_gauss_iter": "assets/indonesia/u/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/indonesia/u/diff_gauss_iter_ne.png"
+          },
+          "vmin": -96.26560791015625,
+          "vmax": 96.26560791015625
+        },
+        "v": {
+          "bounds": [
+            [
+              -10.999999999999998,
+              94.0
+            ],
+            [
+              5.950000000000002,
+              140.95
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/indonesia/v/raw.png",
+            "gaussian": "assets/indonesia/v/gaussian.png",
+            "iterative": "assets/indonesia/v/iterative.png",
+            "gaussian_ne": "assets/indonesia/v/gaussian_ne.png",
+            "iterative_ne": "assets/indonesia/v/iterative_ne.png",
+            "nan_mask": "assets/indonesia/v/nan_mask.png",
+            "diff_gauss_iter": "assets/indonesia/v/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/indonesia/v/diff_gauss_iter_ne.png"
+          },
+          "vmin": -83.9023095703125,
+          "vmax": 83.9023095703125
+        }
+      },
+      "metrics": {
+        "hs": {
+          "nan_raw": 31131,
+          "nan_gaussian_ne": 27424,
+          "nan_iterative_ne": 27424,
+          "coastal_gain": 3738,
+          "coastal_gain_iterative": 3738,
+          "diff_mean": 0.2926173508167267,
+          "diff_max": 0.9721660614013672,
+          "diff_ne_mean": 0.0023688313085585833,
+          "diff_ne_max": 0.9721660614013672,
+          "t_gaussian": 0.10846170037984848,
+          "t_iterative": 0.23739830777049065
+        },
+        "u": {
+          "nan_raw": 31570,
+          "nan_gaussian_ne": 27424,
+          "nan_iterative_ne": 27424,
+          "coastal_gain": 4160,
+          "coastal_gain_iterative": 4160,
+          "diff_mean": 4.940080165863037,
+          "diff_max": 102.37265014648438,
+          "diff_ne_mean": 0.14036040008068085,
+          "diff_ne_max": 91.07957458496094,
+          "t_gaussian": 0.10655389726161957,
+          "t_iterative": 0.2311042696237564
+        },
+        "v": {
+          "nan_raw": 31570,
+          "nan_gaussian_ne": 27424,
+          "nan_iterative_ne": 27424,
+          "coastal_gain": 4160,
+          "coastal_gain_iterative": 4160,
+          "diff_mean": 5.026406288146973,
+          "diff_max": 86.05844116210938,
+          "diff_ne_mean": 0.11592007428407669,
+          "diff_ne_max": 65.204833984375,
+          "t_gaussian": 0.10812223330140114,
+          "t_iterative": 0.22708259895443916
+        }
+      },
+      "ne_coast_url": "assets/indonesia/ne_coast.geojson",
+      "other_coastlines_url": null
+    },
+    {
+      "id": "selat_sunda",
+      "name": "Sunda Strait",
+      "bbox": {
+        "lon_min": 104.5,
+        "lon_max": 107.0,
+        "lat_min": -7.0,
+        "lat_max": -5.5
+      },
+      "stride": 1,
+      "layers": {
+        "hs": {
+          "bounds": [
+            [
+              -6.999999999999999,
+              104.5
+            ],
+            [
+              -5.524999999999999,
+              107.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/selat_sunda/hs/raw.png",
+            "gaussian": "assets/selat_sunda/hs/gaussian.png",
+            "iterative": "assets/selat_sunda/hs/iterative.png",
+            "gaussian_ne": "assets/selat_sunda/hs/gaussian_ne.png",
+            "iterative_ne": "assets/selat_sunda/hs/iterative_ne.png",
+            "nan_mask": "assets/selat_sunda/hs/nan_mask.png",
+            "diff_gauss_iter": "assets/selat_sunda/hs/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/selat_sunda/hs/diff_gauss_iter_ne.png"
+          },
+          "vmin": 0.0,
+          "vmax": 1.6133642196655273
+        },
+        "u": {
+          "bounds": [
+            [
+              -6.999999999999999,
+              104.5
+            ],
+            [
+              -5.524999999999999,
+              107.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/selat_sunda/u/raw.png",
+            "gaussian": "assets/selat_sunda/u/gaussian.png",
+            "iterative": "assets/selat_sunda/u/iterative.png",
+            "gaussian_ne": "assets/selat_sunda/u/gaussian_ne.png",
+            "iterative_ne": "assets/selat_sunda/u/iterative_ne.png",
+            "nan_mask": "assets/selat_sunda/u/nan_mask.png",
+            "diff_gauss_iter": "assets/selat_sunda/u/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/selat_sunda/u/diff_gauss_iter_ne.png"
+          },
+          "vmin": -39.632387695312524,
+          "vmax": 39.632387695312524
+        },
+        "v": {
+          "bounds": [
+            [
+              -6.999999999999999,
+              104.5
+            ],
+            [
+              -5.524999999999999,
+              107.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/selat_sunda/v/raw.png",
+            "gaussian": "assets/selat_sunda/v/gaussian.png",
+            "iterative": "assets/selat_sunda/v/iterative.png",
+            "gaussian_ne": "assets/selat_sunda/v/gaussian_ne.png",
+            "iterative_ne": "assets/selat_sunda/v/iterative_ne.png",
+            "nan_mask": "assets/selat_sunda/v/nan_mask.png",
+            "diff_gauss_iter": "assets/selat_sunda/v/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/selat_sunda/v/diff_gauss_iter_ne.png"
+          },
+          "vmin": -39.72280395507814,
+          "vmax": 39.72280395507814
+        }
+      },
+      "metrics": {
+        "hs": {
+          "nan_raw": 2176,
+          "nan_gaussian_ne": 1981,
+          "nan_iterative_ne": 1981,
+          "coastal_gain": 214,
+          "coastal_gain_iterative": 214,
+          "diff_mean": 0.3314678966999054,
+          "diff_max": 0.821342408657074,
+          "diff_ne_mean": 0.015281864441931248,
+          "diff_ne_max": 0.821342408657074,
+          "t_gaussian": 0.006256464868783951,
+          "t_iterative": 0.016269687563180923
+        },
+        "u": {
+          "nan_raw": 2176,
+          "nan_gaussian_ne": 1981,
+          "nan_iterative_ne": 1981,
+          "coastal_gain": 214,
+          "coastal_gain_iterative": 214,
+          "diff_mean": 2.338960886001587,
+          "diff_max": 8.170522689819336,
+          "diff_ne_mean": 0.09586556255817413,
+          "diff_ne_max": 8.170522689819336,
+          "t_gaussian": 0.00595465674996376,
+          "t_iterative": 0.017220616340637207
+        },
+        "v": {
+          "nan_raw": 2176,
+          "nan_gaussian_ne": 1981,
+          "nan_iterative_ne": 1981,
+          "coastal_gain": 214,
+          "coastal_gain_iterative": 214,
+          "diff_mean": 1.718475580215454,
+          "diff_max": 8.840826988220215,
+          "diff_ne_mean": 0.09893026947975159,
+          "diff_ne_max": 8.533772468566895,
+          "t_gaussian": 0.005849089473485947,
+          "t_iterative": 0.016616985201835632
+        }
+      },
+      "ne_coast_url": "assets/selat_sunda/ne_coast.geojson",
+      "other_coastlines_url": null
+    },
+    {
+      "id": "nusa_tenggara",
+      "name": "Nusa Tenggara",
+      "bbox": {
+        "lon_min": 116.0,
+        "lon_max": 126.0,
+        "lat_min": -12.0,
+        "lat_max": -6.0
+      },
+      "stride": 1,
+      "layers": {
+        "hs": {
+          "bounds": [
+            [
+              -12.0,
+              116.0
+            ],
+            [
+              -6.024999999999999,
+              126.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/nusa_tenggara/hs/raw.png",
+            "gaussian": "assets/nusa_tenggara/hs/gaussian.png",
+            "iterative": "assets/nusa_tenggara/hs/iterative.png",
+            "gaussian_ne": "assets/nusa_tenggara/hs/gaussian_ne.png",
+            "iterative_ne": "assets/nusa_tenggara/hs/iterative_ne.png",
+            "nan_mask": "assets/nusa_tenggara/hs/nan_mask.png",
+            "diff_gauss_iter": "assets/nusa_tenggara/hs/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/nusa_tenggara/hs/diff_gauss_iter_ne.png"
+          },
+          "vmin": 0.0,
+          "vmax": 1.550687313079834
+        },
+        "u": {
+          "bounds": [
+            [
+              -12.0,
+              116.0
+            ],
+            [
+              -6.024999999999999,
+              126.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/nusa_tenggara/u/raw.png",
+            "gaussian": "assets/nusa_tenggara/u/gaussian.png",
+            "iterative": "assets/nusa_tenggara/u/iterative.png",
+            "gaussian_ne": "assets/nusa_tenggara/u/gaussian_ne.png",
+            "iterative_ne": "assets/nusa_tenggara/u/iterative_ne.png",
+            "nan_mask": "assets/nusa_tenggara/u/nan_mask.png",
+            "diff_gauss_iter": "assets/nusa_tenggara/u/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/nusa_tenggara/u/diff_gauss_iter_ne.png"
+          },
+          "vmin": -61.731798095703105,
+          "vmax": 61.731798095703105
+        },
+        "v": {
+          "bounds": [
+            [
+              -12.0,
+              116.0
+            ],
+            [
+              -6.024999999999999,
+              126.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/nusa_tenggara/v/raw.png",
+            "gaussian": "assets/nusa_tenggara/v/gaussian.png",
+            "iterative": "assets/nusa_tenggara/v/iterative.png",
+            "gaussian_ne": "assets/nusa_tenggara/v/gaussian_ne.png",
+            "iterative_ne": "assets/nusa_tenggara/v/iterative_ne.png",
+            "nan_mask": "assets/nusa_tenggara/v/nan_mask.png",
+            "diff_gauss_iter": "assets/nusa_tenggara/v/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/nusa_tenggara/v/diff_gauss_iter_ne.png"
+          },
+          "vmin": -39.30321655273434,
+          "vmax": 39.30321655273434
+        }
+      },
+      "metrics": {
+        "hs": {
+          "nan_raw": 8962,
+          "nan_gaussian_ne": 8259,
+          "nan_iterative_ne": 8259,
+          "coastal_gain": 858,
+          "coastal_gain_iterative": 858,
+          "diff_mean": 0.14682219922542572,
+          "diff_max": 0.7098385691642761,
+          "diff_ne_mean": 0.00048498468822799623,
+          "diff_ne_max": 0.6480854749679565,
+          "t_gaussian": 0.03502623736858368,
+          "t_iterative": 0.1341848149895668
+        },
+        "u": {
+          "nan_raw": 8962,
+          "nan_gaussian_ne": 8259,
+          "nan_iterative_ne": 8259,
+          "coastal_gain": 858,
+          "coastal_gain_iterative": 858,
+          "diff_mean": 2.3892908096313477,
+          "diff_max": 16.263063430786133,
+          "diff_ne_mean": 0.013992233201861382,
+          "diff_ne_max": 8.769901275634766,
+          "t_gaussian": 0.03388746827840805,
+          "t_iterative": 0.13336749002337456
+        },
+        "v": {
+          "nan_raw": 8962,
+          "nan_gaussian_ne": 8259,
+          "nan_iterative_ne": 8259,
+          "coastal_gain": 858,
+          "coastal_gain_iterative": 858,
+          "diff_mean": 1.7917757034301758,
+          "diff_max": 17.054536819458008,
+          "diff_ne_mean": 0.011322067119181156,
+          "diff_ne_max": 9.941993713378906,
+          "t_gaussian": 0.03394486755132675,
+          "t_iterative": 0.13354476168751717
+        }
+      },
+      "ne_coast_url": "assets/nusa_tenggara/ne_coast.geojson",
+      "other_coastlines_url": null
+    },
+    {
+      "id": "bali",
+      "name": "Bali",
+      "bbox": {
+        "lon_min": 114.4,
+        "lon_max": 115.8,
+        "lat_min": -9.0,
+        "lat_max": -7.8
+      },
+      "stride": 1,
+      "layers": {
+        "hs": {
+          "bounds": [
+            [
+              -8.999999999999998,
+              114.425
+            ],
+            [
+              -7.824999999999999,
+              115.8
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/bali/hs/raw.png",
+            "gaussian": "assets/bali/hs/gaussian.png",
+            "iterative": "assets/bali/hs/iterative.png",
+            "gaussian_ne": "assets/bali/hs/gaussian_ne.png",
+            "iterative_ne": "assets/bali/hs/iterative_ne.png",
+            "nan_mask": "assets/bali/hs/nan_mask.png",
+            "diff_gauss_iter": "assets/bali/hs/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/bali/hs/diff_gauss_iter_ne.png"
+          },
+          "vmin": 0.0,
+          "vmax": 1.3349425792694092
+        },
+        "u": {
+          "bounds": [
+            [
+              -8.999999999999998,
+              114.425
+            ],
+            [
+              -7.824999999999999,
+              115.8
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/bali/u/raw.png",
+            "gaussian": "assets/bali/u/gaussian.png",
+            "iterative": "assets/bali/u/iterative.png",
+            "gaussian_ne": "assets/bali/u/gaussian_ne.png",
+            "iterative_ne": "assets/bali/u/iterative_ne.png",
+            "nan_mask": "assets/bali/u/nan_mask.png",
+            "diff_gauss_iter": "assets/bali/u/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/bali/u/diff_gauss_iter_ne.png"
+          },
+          "vmin": -42.39484130859376,
+          "vmax": 42.39484130859376
+        },
+        "v": {
+          "bounds": [
+            [
+              -8.999999999999998,
+              114.425
+            ],
+            [
+              -7.824999999999999,
+              115.8
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/bali/v/raw.png",
+            "gaussian": "assets/bali/v/gaussian.png",
+            "iterative": "assets/bali/v/iterative.png",
+            "gaussian_ne": "assets/bali/v/gaussian_ne.png",
+            "iterative_ne": "assets/bali/v/iterative_ne.png",
+            "nan_mask": "assets/bali/v/nan_mask.png",
+            "diff_gauss_iter": "assets/bali/v/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/bali/v/diff_gauss_iter_ne.png"
+          },
+          "vmin": -56.859549560546895,
+          "vmax": 56.859549560546895
+        }
+      },
+      "metrics": {
+        "hs": {
+          "nan_raw": 684,
+          "nan_gaussian_ne": 619,
+          "nan_iterative_ne": 619,
+          "coastal_gain": 81,
+          "coastal_gain_iterative": 81,
+          "diff_mean": 0.15385019779205322,
+          "diff_max": 0.5864216089248657,
+          "diff_ne_mean": 0.0036297047045081854,
+          "diff_ne_max": 0.5864216089248657,
+          "t_gaussian": 0.0032171830534934998,
+          "t_iterative": 0.009945832192897797
+        },
+        "u": {
+          "nan_raw": 684,
+          "nan_gaussian_ne": 619,
+          "nan_iterative_ne": 619,
+          "coastal_gain": 81,
+          "coastal_gain_iterative": 81,
+          "diff_mean": 2.5297932624816895,
+          "diff_max": 25.51667022705078,
+          "diff_ne_mean": 0.10208376497030258,
+          "diff_ne_max": 18.186885833740234,
+          "t_gaussian": 0.003180127590894699,
+          "t_iterative": 0.010222837328910828
+        },
+        "v": {
+          "nan_raw": 684,
+          "nan_gaussian_ne": 619,
+          "nan_iterative_ne": 619,
+          "coastal_gain": 81,
+          "coastal_gain_iterative": 81,
+          "diff_mean": 2.0768167972564697,
+          "diff_max": 17.384929656982422,
+          "diff_ne_mean": 0.08329456299543381,
+          "diff_ne_max": 17.384929656982422,
+          "t_gaussian": 0.003146253526210785,
+          "t_iterative": 0.010324418544769287
+        }
+      },
+      "ne_coast_url": "assets/bali/ne_coast.geojson",
+      "other_coastlines_url": null
+    },
+    {
+      "id": "selat_malaka",
+      "name": "Malacca Strait",
+      "bbox": {
+        "lon_min": 98.0,
+        "lon_max": 104.0,
+        "lat_min": -1.0,
+        "lat_max": 6.0
+      },
+      "stride": 1,
+      "layers": {
+        "hs": {
+          "bounds": [
+            [
+              -0.9999999999999986,
+              98.0
+            ],
+            [
+              5.975000000000002,
+              104.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/selat_malaka/hs/raw.png",
+            "gaussian": "assets/selat_malaka/hs/gaussian.png",
+            "iterative": "assets/selat_malaka/hs/iterative.png",
+            "gaussian_ne": "assets/selat_malaka/hs/gaussian_ne.png",
+            "iterative_ne": "assets/selat_malaka/hs/iterative_ne.png",
+            "nan_mask": "assets/selat_malaka/hs/nan_mask.png",
+            "diff_gauss_iter": "assets/selat_malaka/hs/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/selat_malaka/hs/diff_gauss_iter_ne.png"
+          },
+          "vmin": 0.0,
+          "vmax": 1.8964965343475342
+        },
+        "u": {
+          "bounds": [
+            [
+              -0.9999999999999986,
+              98.0
+            ],
+            [
+              5.975000000000002,
+              104.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/selat_malaka/u/raw.png",
+            "gaussian": "assets/selat_malaka/u/gaussian.png",
+            "iterative": "assets/selat_malaka/u/iterative.png",
+            "gaussian_ne": "assets/selat_malaka/u/gaussian_ne.png",
+            "iterative_ne": "assets/selat_malaka/u/iterative_ne.png",
+            "nan_mask": "assets/selat_malaka/u/nan_mask.png",
+            "diff_gauss_iter": "assets/selat_malaka/u/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/selat_malaka/u/diff_gauss_iter_ne.png"
+          },
+          "vmin": -83.22548339843752,
+          "vmax": 83.22548339843752
+        },
+        "v": {
+          "bounds": [
+            [
+              -0.9999999999999986,
+              98.0
+            ],
+            [
+              5.975000000000002,
+              104.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/selat_malaka/v/raw.png",
+            "gaussian": "assets/selat_malaka/v/gaussian.png",
+            "iterative": "assets/selat_malaka/v/iterative.png",
+            "gaussian_ne": "assets/selat_malaka/v/gaussian_ne.png",
+            "iterative_ne": "assets/selat_malaka/v/iterative_ne.png",
+            "nan_mask": "assets/selat_malaka/v/nan_mask.png",
+            "diff_gauss_iter": "assets/selat_malaka/v/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/selat_malaka/v/diff_gauss_iter_ne.png"
+          },
+          "vmin": -54.64185302734375,
+          "vmax": 54.64185302734375
+        }
+      },
+      "metrics": {
+        "hs": {
+          "nan_raw": 39684,
+          "nan_gaussian_ne": 38490,
+          "nan_iterative_ne": 38490,
+          "coastal_gain": 1327,
+          "coastal_gain_iterative": 1327,
+          "diff_mean": 0.28869518637657166,
+          "diff_max": 1.1343358755111694,
+          "diff_ne_mean": 0.007652700413018465,
+          "diff_ne_max": 1.1343358755111694,
+          "t_gaussian": 0.06258881464600563,
+          "t_iterative": 0.12180845439434052
+        },
+        "u": {
+          "nan_raw": 40055,
+          "nan_gaussian_ne": 38490,
+          "nan_iterative_ne": 38490,
+          "coastal_gain": 1680,
+          "coastal_gain_iterative": 1680,
+          "diff_mean": 6.805347442626953,
+          "diff_max": 39.3449592590332,
+          "diff_ne_mean": 0.22368735074996948,
+          "diff_ne_max": 29.938316345214844,
+          "t_gaussian": 0.06746432557702065,
+          "t_iterative": 0.12227191776037216
+        },
+        "v": {
+          "nan_raw": 40055,
+          "nan_gaussian_ne": 38490,
+          "nan_iterative_ne": 38490,
+          "coastal_gain": 1680,
+          "coastal_gain_iterative": 1680,
+          "diff_mean": 7.1174635887146,
+          "diff_max": 39.522457122802734,
+          "diff_ne_mean": 0.24563546478748322,
+          "diff_ne_max": 28.207252502441406,
+          "t_gaussian": 0.06702455505728722,
+          "t_iterative": 0.12354140728712082
+        }
+      },
+      "ne_coast_url": "assets/selat_malaka/ne_coast.geojson",
+      "other_coastlines_url": null
+    },
+    {
+      "id": "maluku",
+      "name": "Maluku",
+      "bbox": {
+        "lon_min": 124.0,
+        "lon_max": 135.0,
+        "lat_min": -9.0,
+        "lat_max": 3.0
+      },
+      "stride": 1,
+      "layers": {
+        "hs": {
+          "bounds": [
+            [
+              -8.999999999999998,
+              124.0
+            ],
+            [
+              2.975000000000002,
+              135.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/maluku/hs/raw.png",
+            "gaussian": "assets/maluku/hs/gaussian.png",
+            "iterative": "assets/maluku/hs/iterative.png",
+            "gaussian_ne": "assets/maluku/hs/gaussian_ne.png",
+            "iterative_ne": "assets/maluku/hs/iterative_ne.png",
+            "nan_mask": "assets/maluku/hs/nan_mask.png",
+            "diff_gauss_iter": "assets/maluku/hs/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/maluku/hs/diff_gauss_iter_ne.png"
+          },
+          "vmin": 0.0,
+          "vmax": 1.19903564453125
+        },
+        "u": {
+          "bounds": [
+            [
+              -8.999999999999998,
+              124.0
+            ],
+            [
+              2.975000000000002,
+              135.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/maluku/u/raw.png",
+            "gaussian": "assets/maluku/u/gaussian.png",
+            "iterative": "assets/maluku/u/iterative.png",
+            "gaussian_ne": "assets/maluku/u/gaussian_ne.png",
+            "iterative_ne": "assets/maluku/u/iterative_ne.png",
+            "nan_mask": "assets/maluku/u/nan_mask.png",
+            "diff_gauss_iter": "assets/maluku/u/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/maluku/u/diff_gauss_iter_ne.png"
+          },
+          "vmin": -50.906893310546835,
+          "vmax": 50.906893310546835
+        },
+        "v": {
+          "bounds": [
+            [
+              -8.999999999999998,
+              124.0
+            ],
+            [
+              2.975000000000002,
+              135.0
+            ]
+          ],
+          "overlays": {
+            "raw": "assets/maluku/v/raw.png",
+            "gaussian": "assets/maluku/v/gaussian.png",
+            "iterative": "assets/maluku/v/iterative.png",
+            "gaussian_ne": "assets/maluku/v/gaussian_ne.png",
+            "iterative_ne": "assets/maluku/v/iterative_ne.png",
+            "nan_mask": "assets/maluku/v/nan_mask.png",
+            "diff_gauss_iter": "assets/maluku/v/diff_gauss_iter.png",
+            "diff_gauss_iter_ne": "assets/maluku/v/diff_gauss_iter_ne.png"
+          },
+          "vmin": -43.504561767578124,
+          "vmax": 43.504561767578124
+        }
+      },
+      "metrics": {
+        "hs": {
+          "nan_raw": 24098,
+          "nan_gaussian_ne": 21590,
+          "nan_iterative_ne": 21590,
+          "coastal_gain": 2803,
+          "coastal_gain_iterative": 2803,
+          "diff_mean": 0.14777638018131256,
+          "diff_max": 0.574042022228241,
+          "diff_ne_mean": 0.0009827201720327139,
+          "diff_ne_max": 0.4184713065624237,
+          "t_gaussian": 0.13460414111614227,
+          "t_iterative": 0.31414247304201126
+        },
+        "u": {
+          "nan_raw": 24416,
+          "nan_gaussian_ne": 21590,
+          "nan_iterative_ne": 21590,
+          "coastal_gain": 3109,
+          "coastal_gain_iterative": 3109,
+          "diff_mean": 3.7975993156433105,
+          "diff_max": 113.85108947753906,
+          "diff_ne_mean": 0.08464924991130829,
+          "diff_ne_max": 103.2671127319336,
+          "t_gaussian": 0.13517149537801743,
+          "t_iterative": 0.312180008739233
+        },
+        "v": {
+          "nan_raw": 24416,
+          "nan_gaussian_ne": 21590,
+          "nan_iterative_ne": 21590,
+          "coastal_gain": 3109,
+          "coastal_gain_iterative": 3109,
+          "diff_mean": 2.393836259841919,
+          "diff_max": 45.551307678222656,
+          "diff_ne_mean": 0.03261887654662132,
+          "diff_ne_max": 42.366886138916016,
+          "t_gaussian": 0.1379706710577011,
+          "t_iterative": 0.30342796072363853
+        }
+      },
+      "ne_coast_url": "assets/maluku/ne_coast.geojson",
+      "other_coastlines_url": null
+    }
+  ]
+}
