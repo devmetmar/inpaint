@@ -38,8 +38,11 @@ ds3 = ds.inpaint.fill(method="iterative", vars=["hs"])
 
 | Method | Key params | Backend |
 |--------|------------|---------|
-| `gaussian` | `stddev`, `max_passes` | Astropy `interpolate_replace_nans` (multi-pass) |
+| `gaussian` | `stddev`, `max_passes` | Small-kernel SciPy `convolve` weighted num/den (multi-pass; sigma grows on stall, capped) |
 | `iterative` | `max_iter`, `tol`, `parallel` | SciPy mean diffusion |
+
+Valid (non-NaN) pixels are never modified. For coastal pipelines, seed land cells
+before calling `fill_nans` so continental NaN holes do not dominate runtime.
 
 Spatial (Y/X) and time (T) dims are detected from **CF/NetCDF Conventions** on coordinates — `standard_name`, `axis`, then `units` — so labels like `ROW`/`COL`/`TSTEP` work if metadata is present. Common names (`lat`/`lon`/`time`) are a fallback. Other dims are processed slice-by-slice.
 
